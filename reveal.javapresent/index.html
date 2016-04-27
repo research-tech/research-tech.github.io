@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Reveal.js 3 Slide Demo</title>
+    <title>A Light Intro to Generics for Android Developers</title>
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/beige.css" id="theme">
+    <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
     <!--Add support for earlier versions of Internet Explorer -->
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
@@ -16,25 +16,62 @@
     <div class="reveal">
         <!-- Wrap all slides in a single "slides" class -->
         <div class="slides">
-            <section><h1>Who am I?</h1></section>
+            <section><h1>Who am I?</h1>
+                <img src="images/qrcode.jpg"></section>
 
             <section>
                 <h1>Why this talk?</h1>
-                <p></p></section>
-            <section><h1>Who are you?</h1></section>
-            <section><h1>Let's divide you up:</h1>
-            </section>
-            <section><h1>What can generics do for you</h1>
-                //todo ruthie mention the source is just oracle.
-                <ul><li>They add type checks at compile time.</li>
-                    <li>They can help you avoid casting.</li>
-                    <li>They allow you to write generic algorithms that work on collections of different types.</li>
+                <ul>
+                    <li class="fragment">Getting up and running with Android is "easy."</li>
+                    <li class="fragment">But once you're started it's more fun to build stuff than read the documentation.</li>
+
                 </ul>
             </section>
-            <section><h1>bare bones box example</h1></section>
-            <section><h1>Now where are generics for you?</h1>
+
+            <section><h1>Who are you?</h1>
+                <p class="fragment">I don't know...</p></section>
+
+
+            <section><h1>Let's divide you up:</h1>
+                <p class="fragment">
+                    Generics are new to you and you're ready to hear more.
+
+                </p>
+                <ul class="fragment"><li>Then just don't leave the room.</li></ul>
+                <p class="fragment">
+                    You're an expert on generics and worried about wasting your time.
+                </p>
+                <ul class="fragment"><li>Then take <a href="http://docs.oracle.com/javase/tutorial/java/generics/QandE/generics-questions.html">this quiz.</a></li></ul>
+            </section>
+            <section><h1>Generics...</h1>
+                <ul><li>were introduced in J2SE 5.0 (September 2004)</li></ul></section>
+
+            <section><h1>What can generics do for you?</h1>
+                <ul><li class="fragment">They add type checks at compile time.</li>
+                    <li class="fragment">They can help you avoid casting.</li>
+                    <li class="fragment">They allow you to write generic algorithms that work on collections of different types.</li>
+                </ul>
+                <p>Source: <a href="http://docs.oracle.com/javase/tutorial/java/generics"> Java&#0153 Documentation</a></p>
+            </section>
+
+            <section><p>Bare Bones Example:</p>
+                 <img class="fragment" src="images/GenericBox.png">
+                 <p class="fragment">And you must specify T when you invoke the generic class:  </p>
+                 <img class="fragment" src="images/Invoke.png">
+            </section>
+
+            <section>
+                <p>With Box&#60;T&#62;, T could be just about anything.</p>
+                <p class="fragment">A more useful situation is where you restrict T:</p>
+                <img class="fragment" src="images/Bounded.png">
+                <p class="fragment">By restricting T to subclasses of Integer, you get access to all the methods of Integer.</p></section>
+
+            <section><h1>Now what do generics do for you?</h1>
                 <p>You can see them in the android documentation.</p>
-                <p>Or can you?</p></section>
+                <p class="fragment">Or can you?</p></section>
+
+            <section><h1>Of course you can.</h1>
+                <p>You'll just not see the word "generic."</p></section>
             <!-- ALL SLIDES GO HERE -->
             <!-- Each section element contains an individual slide -->
             <!-- <section>
